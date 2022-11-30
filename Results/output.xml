@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221130 14:06:58.500" rpa="false" schemaversion="3">
+<suite id="s1" name="Jobnorth register" source="D:\work\robot\Jobnorth_RobotFramework\Jobnorth_register.robot">
+<test id="s1-t1" name="TC001 - Open WebBrowser and jobnorth" line="8">
+<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221130 14:06:58.687" endtime="20221130 14:06:58.687"/>
+</kw>
+<kw name="Open browser to jobnorth" library="input_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221130 14:06:58.688" level="INFO">Opening browser 'edge' to base url 'https://www.jobnorththailand.com/account/register_form/member'.</msg>
+<status status="PASS" starttime="20221130 14:06:58.687" endtime="20221130 14:07:01.905"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>ฟอร์มสมัครสมาชิก</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221130 14:07:02.410" level="INFO">Page title is 'ฟอร์มสมัครสมาชิก'.</msg>
+<status status="PASS" starttime="20221130 14:07:01.905" endtime="20221130 14:07:02.410"/>
+</kw>
+<status status="PASS" starttime="20221130 14:06:58.687" endtime="20221130 14:07:02.410"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn" type="TEARDOWN">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Recovery from test case failure</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221130 14:07:02.410" endtime="20221130 14:07:02.411"/>
+</kw>
+<status status="PASS" starttime="20221130 14:06:58.686" endtime="20221130 14:07:02.411"/>
+</test>
+<test id="s1-t2" name="TC002 - Input username//password//confirm_password//email" line="11">
+<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221130 14:07:02.412" endtime="20221130 14:07:02.412"/>
+</kw>
+<kw name="Fill username" library="input_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>UserName</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221130 14:07:02.413" level="INFO">Typing text 'UserName' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20221130 14:07:02.412" endtime="20221130 14:07:03.975"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:02.412" endtime="20221130 14:07:03.975"/>
+</kw>
+<kw name="Fill password" library="input_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>Password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221130 14:07:03.976" level="INFO">Typing text 'Password' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20221130 14:07:03.975" endtime="20221130 14:07:05.536"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:03.975" endtime="20221130 14:07:05.536"/>
+</kw>
+<kw name="Fill confirm password" library="input_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:confirm_password</arg>
+<arg>Password</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221130 14:07:05.537" level="INFO">Typing text 'Password' into text field 'name:confirm_password'.</msg>
+<status status="PASS" starttime="20221130 14:07:05.536" endtime="20221130 14:07:07.094"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:05.536" endtime="20221130 14:07:07.094"/>
+</kw>
+<kw name="Fill email" library="input_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email</arg>
+<arg>ontninjao@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221130 14:07:07.095" level="INFO">Typing text 'ontninjao@gmail.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20221130 14:07:07.095" endtime="20221130 14:07:08.661"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:07.094" endtime="20221130 14:07:08.661"/>
+</kw>
+<kw name="Click confirm register" library="input_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-submit-form</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221130 14:07:08.662" level="INFO">Clicking element 'id:btn-submit-form'.</msg>
+<status status="PASS" starttime="20221130 14:07:08.661" endtime="20221130 14:07:09.701"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:08.661" endtime="20221130 14:07:09.701"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn" type="TEARDOWN">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Recovery from test case failure</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221130 14:07:09.701" endtime="20221130 14:07:09.701"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:02.411" endtime="20221130 14:07:09.702"/>
+</test>
+<test id="s1-t3" name="TC007 - Close browser" line="18">
+<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221130 14:07:09.703" endtime="20221130 14:07:09.703"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221130 14:07:12.703" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221130 14:07:09.703" endtime="20221130 14:07:12.703"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221130 14:07:12.703" endtime="20221130 14:07:15.247"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn" type="TEARDOWN">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Recovery from test case failure</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20221130 14:07:15.247" endtime="20221130 14:07:15.248"/>
+</kw>
+<status status="PASS" starttime="20221130 14:07:09.702" endtime="20221130 14:07:15.248"/>
+</test>
+<doc>Simple example using SeleniumLibrary - Test suite</doc>
+<status status="PASS" starttime="20221130 14:06:58.501" endtime="20221130 14:07:15.249"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Jobnorth register">Jobnorth register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
